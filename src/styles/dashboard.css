@@ -1,0 +1,254 @@
+:root{
+    --white:#fff;
+    --background:#F8F8F8;
+    --dark:#333;
+    --footer:#393939;
+    --yellow:#FFD55B;
+    --nav:#393939;
+}
+*{
+  text-decoration: none;
+}
+
+body{
+    position: relative;
+    background-color:#F8F8F8;
+    padding: 0;
+    margin: 0;
+    height:100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+.navbar{
+    background-color: var(--nav);
+    height: 40px;
+    width:100%;
+    color:var(--white);
+    /* padding: 0.5rem calc((100% - 1500px) / 2); */
+    /* padding: 0 .8rem; */
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: space-around;
+    /* align-items: center; */
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05), 0px 2px 1px rgba(0, 0, 0, 0.25);
+}
+ .navbar a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--white);
+  /* flex-direction: row; */
+  width:10rem;
+  /* margin-left: 2rem; */
+ }
+ .menu-bar{
+  width: 2rem;
+  height: 2rem;
+ }
+.navbar p{
+    color:var(--white);
+    /* padding:30px 0; */
+}
+
+.search{
+    background-color: var(--background);
+    height: 20px;
+    display: flex;
+    align-items: center;
+    width: 20rem;
+    box-shadow: rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    padding:5px 10px;
+    margin: 0 rem 0 2rem;
+}
+
+
+.search input[type='text'], .search input[type='text']:focus{
+    border: none;
+    /* margin-left: 10px; */
+    outline:none;
+    width:90%;
+    /* padding: 3px; */
+    background-color: var(--background);
+    margin: -8px 10px;
+    height: 20px;
+}
+.search input::placeholder{
+    color:#A3A29E;
+}
+
+.dark{
+    background-color:var(--dark);
+    color: var(--white);
+}
+.light{
+    background-color: var(--white);
+    color:var(--dark)
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 15px;
+    margin-top: 0px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--nav);
+    border: 1px solid var(--yellow);
+    -webkit-transition: .4s;
+    transition: .4s;
+
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 10px;
+    width: 10px;
+    left: 4px;
+    bottom: 0;
+    top:2px;
+    background-color: var(--background);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--yellow);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px var(--yellow);
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 20px;
+    padding: 6px;
+  }
+  
+  .slider.round:before {
+    border-radius: 20px;
+  }
+  
+  .userInfo{
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+  }
+  .userInfo p{
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+  .footer{
+    background-color:var(--footer);
+    /* position: fixed;
+    bottom: 0;
+    padding: 0; */
+    height: 30px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padd:0 2rem; */
+  }
+  .copyright{
+    display: flex;
+    padding-left: 2rem;
+  }
+  .copyright p, .activity p{
+    color: var(--white);
+  }
+  .activity{
+    padding-right: 2rem;
+  }
+@media(max-width:1024){
+  .navbar a{
+    width: auto;
+  }
+}
+  @media (max-width: 767px){
+    .clock{
+      width:8rem;
+      margin: 0 0.8rem;
+    }
+    .navbar{
+      width: 100%;
+      display: flex;
+      /* justify-content: space-between; */
+    }
+    .navbar a{
+      width: 9rem;
+    }
+    .search{
+      display: none;
+      /* background-color: green; */
+    }
+    .switch{
+      display: none;
+    }
+    
+  }
+
+  .ChatBox {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .ChatBox-messages {
+    height: 200px;
+    overflow-y: scroll;
+  }
+  
+  .ChatBox-message {
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .ChatBox-input {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .ChatBox-input input {
+    flex-grow: 1;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 10px;
+  }
+  
+  .ChatBox-input button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
